@@ -55,9 +55,12 @@ def tekstcheck():
     for i in range(len(min(input1, input2))): #loop over de hoeveelheid characters in de kortste string
         if input1[i] != input2[i]: #als er binnen de kortste string al een verschil is met de langere string
             return print(f'Het eerste verschil zit op index: {i}') #return de index
-        else:
+        elif len(input1) == len(input2) == i+1:
+            return print(f'De strings zijn hetzelfde!')
+        elif i+1 == len(min(input1, input2)):
             return print(f'Het eerste verschil zit op index: {min(len(input1), len(input2))}') #return index van eerste "langere" character
 
+tekstcheck()
 ## OPDRACHT 3##
 
 ## A ##
